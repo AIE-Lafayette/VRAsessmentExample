@@ -19,6 +19,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: SciFiTrimSheet_decals_mat
     second: {fileID: 2100000, guid: 10a936450661c5e4eb2e6f5bfbe1b8da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 1d1563ec974112e488c5da07ed0c992b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
