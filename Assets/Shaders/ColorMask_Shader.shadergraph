@@ -106,7 +106,11 @@
             "m_Id": "1e9f1df491ed4db699af20e3eec938a4"
         }
     ],
-    "m_GroupDatas": [],
+    "m_GroupDatas": [
+        {
+            "m_Id": "b8f76e3a966e41d6b9d6d6edeca4dea3"
+        }
+    ],
     "m_StickyNoteDatas": [],
     "m_Edges": [
         {
@@ -565,7 +569,7 @@
     "m_Type": "UnityEditor.ShaderGraph.SampleTexture2DNode",
     "m_ObjectId": "11d75a252db54d1c8327d44d64cc670c",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "b8f76e3a966e41d6b9d6d6edeca4dea3"
     },
     "m_Name": "Sample Texture 2D",
     "m_DrawState": {
@@ -621,7 +625,7 @@
     "m_Type": "UnityEditor.ShaderGraph.SampleTexture2DNode",
     "m_ObjectId": "13e59f2264e143cc9f56b46d0de90fe2",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "b8f76e3a966e41d6b9d6d6edeca4dea3"
     },
     "m_Name": "Sample Texture 2D",
     "m_DrawState": {
@@ -724,7 +728,7 @@
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "1540db93f1464e46a0970c8f3e79e6ea",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "b8f76e3a966e41d6b9d6d6edeca4dea3"
     },
     "m_Name": "Property",
     "m_DrawState": {
@@ -869,7 +873,7 @@
     "m_Type": "UnityEditor.ShaderGraph.LerpNode",
     "m_ObjectId": "1e9f1df491ed4db699af20e3eec938a4",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "b8f76e3a966e41d6b9d6d6edeca4dea3"
     },
     "m_Name": "Lerp",
     "m_DrawState": {
@@ -1513,7 +1517,7 @@
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "5fbe64b84d2e427b84c9160839ba0d04",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "b8f76e3a966e41d6b9d6d6edeca4dea3"
     },
     "m_Name": "Property",
     "m_DrawState": {
@@ -1743,7 +1747,7 @@
     "m_Type": "UnityEditor.ShaderGraph.MultiplyNode",
     "m_ObjectId": "6abe514c3ef044da8bb95f2947f418ff",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "b8f76e3a966e41d6b9d6d6edeca4dea3"
     },
     "m_Name": "Multiply",
     "m_DrawState": {
@@ -2477,6 +2481,17 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.GroupData",
+    "m_ObjectId": "b8f76e3a966e41d6b9d6d6edeca4dea3",
+    "m_Title": "Color Mask",
+    "m_Position": {
+        "x": 10.0,
+        "y": 10.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "bc47c102e05e45c282f55419961b1c3b",
     "m_Id": 0,
@@ -2565,7 +2580,7 @@
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "d39de734743e449682c7b7bef82ab1fd",
     "m_Group": {
-        "m_Id": ""
+        "m_Id": "b8f76e3a966e41d6b9d6d6edeca4dea3"
     },
     "m_Name": "Property",
     "m_DrawState": {
