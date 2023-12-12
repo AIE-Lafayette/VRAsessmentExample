@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 20751a36329fafc45bf680992e63d72a, type: 2}
+    - target: {fileID: 667385265721921140, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 932542232293775822, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -115,6 +119,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 20751a36329fafc45bf680992e63d72a, type: 2}
+    - target: {fileID: 6118416229651893940, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6416735259663184489, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -145,3 +153,57 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 20751a36329fafc45bf680992e63d72a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
+--- !u!1 &4322220436452898868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 397001270830218628, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
+  m_PrefabInstance: {fileID: 4501895501662373296}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-6032562571214359738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322220436452898868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98b22dd1b812d4644bff3c9a54495d3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startHealth: 3
+  _currentHealth: 0
+  _deathAction: 2
+  _onTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
+  _onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &9105404903830685338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322220436452898868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3bdde39e90dc14288ad497aa8b3c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 1
+  _canMove: 1
+  _updateFacing: 1
+--- !u!135 &1244326841284175473
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322220436452898868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
