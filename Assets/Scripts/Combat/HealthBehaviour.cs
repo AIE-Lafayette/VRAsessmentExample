@@ -31,7 +31,7 @@ public class HealthBehaviour : MonoBehaviour
         }
         private set
         {
-            _currentHealth -= value;
+            _currentHealth = value;
         }
     }
 

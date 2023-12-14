@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AttackBotBlue
       objectReference: {fileID: 0}
+    - target: {fileID: 397001270830218628, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 397001270830218631, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -158,6 +162,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 397001270830218628, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
   m_PrefabInstance: {fileID: 4501895501662373296}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &1244326841284175473
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4322220436452898868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-6032562571214359738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +195,19 @@ MonoBehaviour:
       m_Calls: []
   _onDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4322220436452898868}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &9105404903830685338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,16 +223,3 @@ MonoBehaviour:
   _moveSpeed: 1
   _canMove: 1
   _updateFacing: 1
---- !u!135 &1244326841284175473
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4322220436452898868}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
