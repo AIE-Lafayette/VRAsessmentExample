@@ -58,6 +58,8 @@ MonoBehaviour:
       m_Calls: []
   _damageEffect: {fileID: 962401135209959635, guid: b61b9f2ad9438834c97bf701fe47d415, type: 3}
   _deathEffect: {fileID: 3198923806287051063, guid: 442486026d7ae68428087e1cf03543fe, type: 3}
+  _hitSound: {fileID: 8300000, guid: 165558794524f794ebedbed89711ce17, type: 3}
+  _deathSound: {fileID: 8300000, guid: bbedf89cedece764aa6f28965f136cc4, type: 3}
 --- !u!114 &8144989871482673563
 MonoBehaviour:
   m_ObjectHideFlags: 0

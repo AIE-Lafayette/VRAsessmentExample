@@ -42,7 +42,7 @@ public class InputBehaviour : MonoBehaviour
 
     private void OnEnable()
     {
-        _actions.Enable();
+        _actions?.Enable();
     }
 
     private void RotateCamera(InputAction.CallbackContext context)

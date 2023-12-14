@@ -11,6 +11,8 @@ public class ProjectileBehaviour : MonoBehaviour
     private float _despawnDelay = 1;
     [SerializeField]
     private bool _despawnOnCollision = true;
+    [SerializeField]
+    private AudioClip _spawnSound;
     private string _ownerTag;
     private Rigidbody _rb;
 
@@ -26,6 +28,7 @@ public class ProjectileBehaviour : MonoBehaviour
     private void Start()
     {
         Destroy(gameObject, _despawnDelay);
+        SoundManagerBehaviour.Instance.PlaySound(_spawnSound);
     }
 
     private void OnTriggerEnter(Collider other)

@@ -26,6 +26,10 @@ public class HealthBehaviour : MonoBehaviour
     private GameObject _damageEffect;
     [SerializeField]
     private GameObject _deathEffect;
+    [SerializeField]
+    private AudioClip _hitSound;
+    [SerializeField]
+    private AudioClip _deathSound;
 
 
     public float CurrentHealth
@@ -54,6 +58,7 @@ public class HealthBehaviour : MonoBehaviour
             Instantiate(_damageEffect, transform.position, transform.rotation);
 
         _onTakeDamage?.Invoke();
+        SoundManagerBehaviour.Instance.PlaySound(_hitSound);
 
         if (CurrentHealth <= 0)
             PerformDeathAction();
@@ -65,6 +70,9 @@ public class HealthBehaviour : MonoBehaviour
 
         if (_deathEffect)
             Instantiate(_deathEffect, transform.position, transform.rotation);
+
+
+        SoundManagerBehaviour.Instance.PlaySound(_deathSound);
 
         switch (_deathAction)
         {
