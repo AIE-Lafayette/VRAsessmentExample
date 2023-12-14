@@ -6,6 +6,7 @@ public class GameManagerBehaviour : MonoBehaviour
 {
     [SerializeField]
     private GameObject _player;
+
     private static GameManagerBehaviour _instance;
 
     public static GameManagerBehaviour Instance

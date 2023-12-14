@@ -22,6 +22,11 @@ public class HealthBehaviour : MonoBehaviour
     private UnityEvent _onTakeDamage;
     [SerializeField]
     private UnityEvent _onDeath;
+    [SerializeField]
+    private GameObject _damageEffect;
+    [SerializeField]
+    private GameObject _deathEffect;
+
 
     public float CurrentHealth
     {
@@ -44,6 +49,10 @@ public class HealthBehaviour : MonoBehaviour
     public void TakeDamage(float damage)
     {
         CurrentHealth -= damage;
+
+        if (_damageEffect)
+            Instantiate(_damageEffect, transform.position, transform.rotation);
+
         _onTakeDamage?.Invoke();
 
         if (CurrentHealth <= 0)
@@ -53,6 +62,9 @@ public class HealthBehaviour : MonoBehaviour
     private void PerformDeathAction()
     {
         _onDeath?.Invoke();
+
+        if (_deathEffect)
+            Instantiate(_deathEffect, transform.position, transform.rotation);
 
         switch (_deathAction)
         {

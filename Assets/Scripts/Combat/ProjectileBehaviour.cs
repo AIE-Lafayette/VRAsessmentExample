@@ -33,7 +33,7 @@ public class ProjectileBehaviour : MonoBehaviour
         if (other.CompareTag(OwnerTag))
             return;
 
-        HealthBehaviour health = other.GetComponent<HealthBehaviour>();
+        HealthBehaviour health = other.attachedRigidbody?.GetComponent<HealthBehaviour>();
 
         if (!health)
             return;

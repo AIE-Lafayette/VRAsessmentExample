@@ -43,6 +43,18 @@ public class SeekBehaviour : MonoBehaviour
         _canMove = true;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (!collision.rigidbody.CompareTag("Player"))
+            return;
+
+        HealthBehaviour health = collision.rigidbody.GetComponent<HealthBehaviour>();
+
+        health.TakeDamage(1);
+
+        Destroy(gameObject);
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
