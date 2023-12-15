@@ -45,6 +45,9 @@ public class SeekBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.rigidbody == null)
+            return;
+
         if (!collision.rigidbody.CompareTag("Player"))
             return;
 

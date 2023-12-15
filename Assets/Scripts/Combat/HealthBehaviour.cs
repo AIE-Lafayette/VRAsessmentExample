@@ -30,6 +30,7 @@ public class HealthBehaviour : MonoBehaviour
     private AudioClip _hitSound;
     [SerializeField]
     private AudioClip _deathSound;
+    private Rigidbody _rb;
 
 
     public float CurrentHealth
@@ -47,10 +48,11 @@ public class HealthBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _currentHealth = _startHealth;    
+        _currentHealth = _startHealth;
+        _rb = GetComponent<Rigidbody>();
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, Vector3 knockbackVelocity = default(Vector3))
     {
         CurrentHealth -= damage;
 
@@ -59,6 +61,9 @@ public class HealthBehaviour : MonoBehaviour
 
         _onTakeDamage?.Invoke();
         SoundManagerBehaviour.Instance.PlaySound(_hitSound);
+
+        if (knockbackVelocity.magnitude > 0)
+            _rb.AddForce(knockbackVelocity, ForceMode.Impulse);
 
         if (CurrentHealth <= 0)
             PerformDeathAction();
@@ -73,6 +78,7 @@ public class HealthBehaviour : MonoBehaviour
 
 
         SoundManagerBehaviour.Instance.PlaySound(_deathSound);
+
 
         switch (_deathAction)
         {

@@ -245,6 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
+  _knockbackScale: 3
   _despawnDelay: 5
   _despawnOnCollision: 1
   _spawnSound: {fileID: 8300000, guid: 93ccdd60096ab7c44baeb04fd573971e, type: 3}

@@ -8,6 +8,8 @@ public class ProjectileBehaviour : MonoBehaviour
     [SerializeField]
     private float _damage;
     [SerializeField]
+    private float _knockbackScale = 1;
+    [SerializeField]
     private float _despawnDelay = 1;
     [SerializeField]
     private bool _despawnOnCollision = true;
@@ -41,7 +43,7 @@ public class ProjectileBehaviour : MonoBehaviour
         if (!health)
             return;
 
-        health.TakeDamage(_damage);
+        health.TakeDamage(_damage, RB.velocity.normalized * _knockbackScale);
 
         if (_despawnOnCollision)
             Destroy(gameObject);
