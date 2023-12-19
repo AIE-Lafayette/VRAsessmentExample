@@ -69,13 +69,27 @@ public class HealthBehaviour : MonoBehaviour
             PerformDeathAction();
     }
 
+    public void AddOnTakeDamageAction(UnityAction action)
+    {
+        _onTakeDamage.AddListener(action);
+    }
+
+    public void AddOnDeathAction(UnityAction action)
+    {
+        _onDeath.AddListener(action);
+    }
+
+    public void SpawnDeathParticles()
+    {
+        if (_deathEffect)
+            Instantiate(_deathEffect, transform.position, transform.rotation);
+    }
+
     private void PerformDeathAction()
     {
         _onDeath?.Invoke();
 
-        if (_deathEffect)
-            Instantiate(_deathEffect, transform.position, transform.rotation);
-
+        SpawnDeathParticles();
 
         SoundManagerBehaviour.Instance.PlaySound(_deathSound);
 
