@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AttackBotBlue
       objectReference: {fileID: 0}
+    - target: {fileID: 397001270830218628, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 397001270830218631, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -63,6 +67,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 20751a36329fafc45bf680992e63d72a, type: 2}
+    - target: {fileID: 667385265721921140, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 932542232293775822, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -115,6 +123,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 20751a36329fafc45bf680992e63d72a, type: 2}
+    - target: {fileID: 6118416229651893940, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6416735259663184489, guid: d4232125b202fb7489c4cd40b808100d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
