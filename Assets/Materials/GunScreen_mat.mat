@@ -116,7 +116,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
-    - _BarFillAmount: 0.5
+    - _BarFillAmount: 2
     - _BarFillContrast: 0
     - _BarShaprness: 1
     - _Blend: 0
