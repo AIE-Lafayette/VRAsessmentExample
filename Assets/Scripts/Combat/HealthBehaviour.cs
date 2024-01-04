@@ -69,6 +69,11 @@ public class HealthBehaviour : MonoBehaviour
             PerformDeathAction();
     }
 
+    public void ResetHealth()
+    {
+        _currentHealth = _startHealth;
+    }
+
     public void AddOnTakeDamageAction(UnityAction action)
     {
         _onTakeDamage.AddListener(action);

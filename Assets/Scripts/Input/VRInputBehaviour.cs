@@ -15,7 +15,7 @@ public class VRInputBehaviour : InputBehaviour
     // Start is called before the first frame update
     protected override void Awake()
     {
-        _leftHandActivate.action.performed += context => LeftGun.Fire();
-        _rightHandActivate.action.performed += context => RightGun.Fire();
+        _rightHandActivate.action.started += context => CanCharge = true;
+        _rightHandActivate.action.performed += context => FireWeapon();
     }
 }

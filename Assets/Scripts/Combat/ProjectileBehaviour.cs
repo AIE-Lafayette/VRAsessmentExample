@@ -20,6 +20,7 @@ public class ProjectileBehaviour : MonoBehaviour
 
     public Rigidbody RB { get => _rb; private set => _rb = value; }
     public string OwnerTag { get => _ownerTag; set => _ownerTag = value; }
+    public float Damage { get => _damage; set => _damage = value; }
 
     // Start is called before the first frame update
     void Awake()
@@ -43,7 +44,7 @@ public class ProjectileBehaviour : MonoBehaviour
         if (!health)
             return;
 
-        health.TakeDamage(_damage, RB.velocity.normalized * _knockbackScale);
+        health.TakeDamage(Damage, RB.velocity.normalized * _knockbackScale);
 
         if (_despawnOnCollision)
             Destroy(gameObject);

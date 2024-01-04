@@ -105,8 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bbeb9751563d1148b60bd0a65c6cb96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _positionOffset: {x: 0, y: 0.5, z: 0}
+  _speed: 2
+  _positionOffset: {x: 0, y: 1, z: 0}
   _useWorldPosition: 0
 --- !u!95 &6569546674973054378 stripped
 Animator:
@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1515296592557215436, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
+      propertyPath: _startHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1515296592557215436, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
       propertyPath: _onTakeDamage.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -164,7 +168,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5717169706292391907, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
       propertyPath: m_Name
-      value: EnemyRed
+      value: EnemyRed Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144989871482673563, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
+      propertyPath: _scoreValue
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8804082640112622226, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
       propertyPath: m_RootOrder
@@ -234,6 +242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bbeb9751563d1148b60bd0a65c6cb96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _positionOffset: {x: 0, y: 0.5, z: 0}
+  _speed: 2
+  _positionOffset: {x: 0, y: 1, z: 0}
   _useWorldPosition: 0

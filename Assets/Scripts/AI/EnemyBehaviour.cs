@@ -18,11 +18,19 @@ public class EnemyBehaviour : MonoBehaviour
     private float _explosionRadius;
     [SerializeField]
     private float _explosionForce;
+    [SerializeField]
+    private int _scoreValue;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
+
+        GameManagerBehaviour.Instance.AddEnemy(this);
+
         _healthBehaviour = GetComponent<HealthBehaviour>();
+
+        _healthBehaviour.AddOnDeathAction(() => GameManagerBehaviour.Instance.RemoveEnemy(this));
+        _healthBehaviour.AddOnDeathAction(() => GameManagerBehaviour.Instance.IncreaseScore(_scoreValue));
         _healthBehaviour.AddOnDeathAction(Explode);
     }
 
@@ -98,10 +106,13 @@ public class EnemyBehaviour : MonoBehaviour
             return;
         }
 
-        if (!collision.rigidbody.CompareTag("Player") && !collision.rigidbody.CompareTag("Enemy"))
-            return;
+        if (collision.rigidbody.CompareTag("Enemy") && collision.rigidbody.velocity.magnitude > 10)
+        {
+            _healthBehaviour.TakeDamage((int)collision.rigidbody.velocity.magnitude / 2);
+        }
 
-        _healthBehaviour.TakeDamage((int)collision.rigidbody.velocity.magnitude / 2);
+        if (!collision.rigidbody.CompareTag("Player"))
+            return;
 
         HealthBehaviour health = collision.rigidbody.GetComponent<HealthBehaviour>();
 

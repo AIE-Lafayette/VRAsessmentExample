@@ -115,6 +115,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1515296592557215436, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
+      propertyPath: _startHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1515296592557215436, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
       propertyPath: _onTakeDamage.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -146,6 +150,10 @@ PrefabInstance:
       propertyPath: _onTakeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2794385063515946363, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3877314479612679525, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -153,6 +161,10 @@ PrefabInstance:
     - target: {fileID: 5717169706292391907, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
       propertyPath: m_Name
       value: EnemyBlue Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144989871482673563, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
+      propertyPath: _scoreValue
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8804082640112622226, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
       propertyPath: m_RootOrder
