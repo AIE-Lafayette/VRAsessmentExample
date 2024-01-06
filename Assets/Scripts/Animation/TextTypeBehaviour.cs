@@ -23,18 +23,18 @@ public class TextTypeBehaviour : MonoBehaviour
         _text = GetComponent<TextMeshProUGUI>();
     }
 
-    private void OnEnable()
+    private void Start()
     {
-        BeginTyping(0);
+        if (_typeOnEnable)
+            BeginTyping(0);
     }
 
     private IEnumerator TypeText(float initalDelay)
     {
         string currentText = "";
-
         for (int i = 0; i < _finishedText.Length; i++)
         {
-            currentText.Append(_finishedText[i]);
+            currentText += _finishedText[i];
             _text.text = currentText;
             yield return new WaitForSeconds(_typeDelay);
         }

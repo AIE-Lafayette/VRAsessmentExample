@@ -46,7 +46,6 @@ public class SoundManagerBehaviour : MonoBehaviour
 
     public void StopSound(AudioClip clip)
     {
-        return;
         if (!_soundEffectSource.isPlaying || clip != _lastClip)
             return;
 
@@ -76,6 +75,8 @@ public class SoundManagerBehaviour : MonoBehaviour
     {
         if (!music)
             return;
+
+        _musicSource.Stop();    
 
         _musicSource.clip = music;
         _musicSource.Play();

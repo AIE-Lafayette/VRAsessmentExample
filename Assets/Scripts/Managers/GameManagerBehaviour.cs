@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.XR.Management;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameManagerBehaviour : MonoBehaviour
@@ -15,6 +16,8 @@ public class GameManagerBehaviour : MonoBehaviour
     private bool _gameStarted;
     private List<EnemyBehaviour> _activeEnemies = new List<EnemyBehaviour>();
     private int _score;
+    [SerializeField]
+    private UnityEvent _onGameStart;
     private static GameManagerBehaviour _instance;
 
     public static GameManagerBehaviour Instance
@@ -70,6 +73,8 @@ public class GameManagerBehaviour : MonoBehaviour
         {
             item.SetActive(true);
         }
+
+        _onGameStart?.Invoke();
     }
 
     public void StopGame()
@@ -83,7 +88,10 @@ public class GameManagerBehaviour : MonoBehaviour
 
         foreach (EnemyBehaviour enemy in _activeEnemies)
         {
-            Destroy(enemy);
+            if (!enemy)
+                continue;
+
+            Destroy(enemy.gameObject);
         }
     }
 
@@ -112,5 +120,10 @@ public class GameManagerBehaviour : MonoBehaviour
     public void ResetGame()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public  void ExitApplication()
+    {
+        Application.Quit();
     }
 }

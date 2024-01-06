@@ -9,11 +9,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5717169706292391907, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
       propertyPath: m_Name
-      value: EnemyYellow
+      value: EnemyYellow Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8144989871482673563, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
       propertyPath: _moveSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144989871482673563, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
+      propertyPath: _scoreValue
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 8804082640112622226, guid: ccaa60efecd8b3a43acc3568d13b34bf, type: 3}
       propertyPath: m_RootOrder
